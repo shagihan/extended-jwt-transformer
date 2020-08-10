@@ -15,14 +15,9 @@
  *
  */
 
-package org.example.internal;
+package org.wso2.caron.test.internal;
 
-import org.wso2.carbon.apimgt.gateway.handlers.security.jwt.transformer.JWTTransformer;
 import org.wso2.carbon.apimgt.impl.APIManagerConfigurationService;
-import org.wso2.carbon.utils.ConfigurationContextService;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ServiceReferenceHolder {
 

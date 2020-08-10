@@ -15,11 +15,11 @@
  *
  */
 
-package org.example.internal;
+package org.wso2.caron.test.internal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.example.ExtendedJWTTransformer;
+import org.wso2.caron.test.ExtendedJWTTransformer;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.*;

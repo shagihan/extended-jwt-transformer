@@ -20,9 +20,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.example</groupId>
+    <groupId>org.wso2.caron.test</groupId>
     <artifactId>extended-jwt-transformer</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
     <repositories>
@@ -116,7 +116,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Private-Package>
-                            org.example.internal
+                            org.wso2.caron.test.internal
                         </Private-Package>
                         <Import-Package>
                             org.apache.commons.logging.*; version=1.0.4,
@@ -125,8 +125,8 @@
                             org.wso2.carbon.apimgt.*
                         </Import-Package>
                         <Export-Package>
-                            !org.example.internal;
-                            org.example.*;
+                            !org.wso2.caron.test.internal;
+                            org.wso2.caron.test.*;
                         </Export-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>

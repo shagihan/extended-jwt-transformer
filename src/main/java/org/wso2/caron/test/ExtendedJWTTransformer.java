@@ -15,7 +15,7 @@
  *
  */
 
-package org.example;
+package org.wso2.caron.test;
 
 import com.nimbusds.jwt.JWTClaimsSet;
 import org.apache.commons.logging.Log;
@@ -28,6 +28,9 @@ import java.util.Properties;
 
 public class ExtendedJWTTransformer extends DefaultJWTTransformer {
     private static final Log log = LogFactory.getLog(ExtendedJWTTransformer.class);
+    /**
+     * You can define your own custom issuer.
+     */
     private static final String ISSUER = "wso2.org/products/am";
     private static final String CLAIM_NAME = "azp";
 
@@ -48,7 +51,7 @@ public class ExtendedJWTTransformer extends DefaultJWTTransformer {
         JWTClaimsSet tempJWTClaimsSet = super.transform(jwtClaimsSet);
         JWTClaimsSet.Builder jwtBuilder = new JWTClaimsSet.Builder();
         for (String key : tempJWTClaimsSet.getClaims().keySet()) {
-            if (key.equals("azp")) {
+            if (key.equals(CLAIM_NAME)) {
                 try {
                     if (tempJWTClaimsSet.getStringArrayClaim(CLAIM_NAME) != null
                             && tempJWTClaimsSet.getStringArrayClaim(CLAIM_NAME).length > 0) {
